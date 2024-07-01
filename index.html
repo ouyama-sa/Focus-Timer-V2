@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet" />
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="shortcut icon"
+			href="./assets/hourglass-medium.svg"
+			type="image/x-svg" />
+
+		<title>Focus Timer</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+		<script type="module" src="./src/main.js" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<button id="toggle-mode">
+				<span class="sr-only">Toggle dark mode</span>
+				<i class="ph-bold ph-sun"></i>
+				<i class="ph-bold ph-moon"></i>
+			</button>
+
+			<section id="timer" class="flex">
+				<span id="minutes">00</span>
+				<span>:</span>
+				<span id="seconds">00</span>
+			</section>
+
+			<section id="controls" class="flex">
+				<button 
+					id="playButton"
+          data-action="toggleRunning" 
+          class="ph ph-play-circle">
+					  <span class="sr-only">Start timer</span>
+				</button>
+			<button 
+				data-action="toggleRunning"
+				class="ph ph-pause-circle">
+				<span class="sr-only">Stop timer</span>
+			</button>
+				<button data-action="reset" class="ph ph-stop-circle disabled">
+          <span class="sr-only">Restart timer</span>
+				</button>
+
+        <button data-action="setPlusFive" class="ph ph-plus-circle">
+          <span class="sr-only">Add five minutes to timer</span>
+        </button>
+        <button data-action="setMinusFive" class="ph ph-minus-circle">
+          <span class="sr-only">Take five minutes from timer</span>
+        </button>
+      </section>
+      
+      <section id="music" class="grid">
+				<button data-action="toggleMusic" class="ph ph-tree-evergreen">
+          <span class="sr-only">Toggle forest ambience</span>
+				</button>
+
+				<button data-action="toggleMusic" class="ph ph-cloud-rain">
+          <span class="sr-only">Toggle rain ambience</span>
+				</button>
+
+        <button data-action="toggleMusic" class="ph ph-coffee">
+          <span class="sr-only">Toggle café ambience</span>
+        </button>
+
+        <button data-action="toggleMusic" class="ph ph-fire">
+          <span class="sr-only">Toggle campfire ambience</span>
+        </button>
+      </section>
+		</div>
+	</body>
+</html>
